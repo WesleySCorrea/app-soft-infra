@@ -1,0 +1,28 @@
+# Variáveis de ambiente (nunca versionar segredos)
+.env
+.env.*
+!.env.example
+
+# Override local do Docker Compose
+docker-compose.override.yml
+compose.override.yml
+
+# Dados de volumes montados localmente (Postgres, Kafka, Keycloak etc.)
+data/
+volumes/
+**/pgdata/
+**/postgres-data/
+**/kafka-data/
+
+# Logs
+logs/
+*.log
+
+# Editores e sistema operacional
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# O export do realm do Keycloak (ex.: keycloak/realm-export.json) DEVE ser versionado.
+# Não adicione *.json aqui.
